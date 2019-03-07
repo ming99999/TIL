@@ -56,11 +56,10 @@ class Chicken(Flyable):
 boo = Duck("Duck")
 boo.myname()
 boo.flying()
+
+>>> my name is Duck
+>>> Duck can fly!
 ```
-
-    my name is Duck
-    Duck can fly!
-
 
 하위 클래스가 상위 클래스의 메소드를 구현하지 않았을 경우, 상위 클래스의 메소드를 그대로 사용한다 
 
@@ -69,10 +68,9 @@ boo.flying()
 foo = Airplane("Airplane")
 foo.myname()                          #Not implemented
 foo.flying()
+
+>>> Airplane can fly! 
 ```
-
-    Airplane can fly!
-
 
 하지만 상위 클래스의 abstract method를 구현하지 않았다면, 하위 클래스의 인스턴스 생성시 에러가 발생한다 
 
@@ -110,15 +108,13 @@ class Chicken(Flyable):
         
     def flying(self):
         print("I wanna fly")
-```
-
-
-```python
+        
+        
 qoo = Chicken("Chicken")
 qoo.myname()
 qoo.flying()
-```
 
-    my name is Chicken
-    I wanna fly
+>>> my name is Chicken
+>>> I wanna fly
+```
 
